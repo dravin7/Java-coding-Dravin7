@@ -1,0 +1,168 @@
+
+import java.util.Scanner;
+
+public class MyClass {
+
+    // 1. This is the helper method that makes the typewriter effect work
+    public static void typeText(String text, int delayInMs) {
+        for (int i = 0; i < text.length(); i++) {
+            System.out.print(text.charAt(i));
+            try {
+                Thread.sleep(delayInMs);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                break;
+            }
+        }
+        System.out.println(); // Moves to a new line when done typing
+    }
+
+    // 2. This is your main game method
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        String input;
+
+        // Using the typewriter effect for your game intro text
+        while(true){
+            Scanner scan = new Scanner(System.in);
+            
+            typeText("Welcome to Vortex Unlocked", 64);
+        
+            System.out.print("Please enter your desired username = ");
+            String name = scan.nextLine();
+            
+            typeText("Hello " + name + " Welcome to Vortex Unlocked, Let's Start", 90);
+            
+            typeText("You see a pitch black door In the NY Subway", 43);
+            System.out.print("Click 1 to enter the door: ");
+            
+            input = scan.nextLine(); 
+            
+            if (input.equals("1")) {
+                typeText("You entered a world of data traveling at 900TB/s", 45);
+                
+                break;
+                
+            }
+
+            else {
+                System.out.println("You are very boring GET A LIFE");
+            }
+        }
+        
+        
+        
+        typeText("To get out of this world you have to collect the 3 Keys", 48);
+        typeText("IF YOU DON'T COMPLETE THIS IN 5 HOURS You WILL DIE", 20);
+        
+         typeText("First step is go find the Blue Key",33);
+         
+         typeText("right or left?",90);
+         //String name = scanner.nextLine();
+          input = scanner.nextLine(); 
+        
+        if (input.equals("right")) {
+            typeText("You see a cloud made out of binary", 20); 
+            typeText(" On the Cloud you see the first key but to get it you have to answer a few qustions!",33);
+        
+            
+        }
+        
+        else {
+            typeText("You fall In a Pool it is surrounded by servers, and they blow up and kill you",15);
+                     System.out.println("YOU DIED! cry about it");
+        }
+        
+        
+        
+       typeText("Question one is what is 1+1 ", 90);
+        input = scanner.nextLine(); 
+    if (input.equals("2")) {
+        typeText("Good job you are not a 1 year old, if you are, stop playing video games and do something better with your life", 35);
+    }
+    
+    else {
+        typeText("Stop playing this game this is for your own good, go to school!", 44);
+    
+    } 
+        
+        
+           
+       typeText("Question two is what is 128 x 2", 90);
+        input = scanner.nextLine(); 
+    if (input.equals("256")) {
+        typeText("Good job you are not a 5 year old, and also more than the ammout of RAM you probably have seen", 30);
+    }
+    
+    else {
+        typeText("Stop playing this game this is for your own good, go to school and do your homework", 45);
+    
+    }
+    
+    
+        
+       typeText("Question three is what is 96 x 2", 55);
+        input = scanner.nextLine(); 
+    if (input.equals("192")) {
+        typeText("Good job you are avaragely smart", 44);
+    }
+    
+    else {
+        typeText("Stop playing this game this is for your own good, go to school and do your homework", 40);
+    
+    }
+    
+    
+     
+     typeText("Ok I see you are worthy, you are awarded the Blue key! now collect 2 more",30);
+     
+       
+         typeText("right or left?",30);
+         //String name = scanner.nextLine();
+          input = scanner.nextLine(); 
+        
+        if (input.equals("right")) {
+            typeText("You see a a staircase that leads down to a dark area", 50); 
+            typeText("You asscend down the stairs",45);
+            System.out.println("you found the orange key on the stair! ");
+        
+            
+        }
+        
+        else {
+            typeText("you see a room full of food and robot sserving",25);
+            
+                     System.out.println("Bigback I see ");
+                     typeText("You ate so much food that you exploded!",33);
+                     System.out.println("YOU DIED!");
+        }
+
+                System.out.println("Now that you have 2 keys, You have 2 choices one is find the purple key or two go home instantly but forget that you ever came here.");
+                System.out.println( "one or two" );
+
+         //String name = scanner.nextLine();
+          input = scanner.nextLine(); 
+        
+        if (input.equals("one")) {
+            typeText("Ok then you have choosed to work the hard way", 50); 
+            typeText("But you see the key under your shoe shinning a bright purple!",45);
+            System.out.println("when you go to pick it up you get teleported to the outside world");
+
+         
+         //String name = scanner.nextLine();
+          input = scanner.nextLine(); 
+        
+        if (input.equals("two")) {
+            typeText("You go to your bedroom but with no memory of what happend", 50); 
+            
+        
+        
+        scanner.close(); // Clean up the scanner resource
+        
+       
+                    
+    }
+        }
+}
+}
